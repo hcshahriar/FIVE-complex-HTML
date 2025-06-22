@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parallax Scrolling</title>
+  <style>
+    body { margin: 0; overflow-x: hidden; }
+    .parallax-section { 
+      height: 100vh; background-attachment: fixed; 
+      background-position: center; background-size: cover; 
+      display: flex; align-items: center; justify-content: center; 
+      color: white; font-size: 3em; 
+    }
+    #section1 { background-image: url('https://via.placeholder.com/1920x1080/333'); }
+    #section2 { background-image: url('https://via.placeholder.com/1920x1080/555'); }
+    #section3 { background-image: url('https://via.placeholder.com/1920x1080/777'); }
+  </style>
+</head>
+<body>
+  <div class="parallax-section" id="section1">Section 1</div>
+  <div class="parallax-section" id="section2">Section 2</div>
+  <div class="parallax-section" id="section3">Section 3</div>
+</body>
+</html>
