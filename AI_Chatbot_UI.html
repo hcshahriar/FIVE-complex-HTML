@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Chatbot UI</title>
+  <style>
+    body { font-family: Arial; }
+    #chatbox { 
+      width: 400px; height: 500px; border: 1px solid #ccc; 
+      margin: 20px auto; padding: 10px; overflow-y: scroll; 
+    }
+    .user { color: blue; text-align: right; }
+    .bot { color: green; text-align: left; }
+  </style>
+</head>
+<body>
+  <div id="chatbox"></div>
+  <input type="text" id="user-input" placeholder="Type a message...">
+  <button onclick="sendMessage()">Send</button>
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('user-input');
+      const chatbox = document.getElementById('chatbox');
+      chatbox.innerHTML += `<p class="user">You: ${input.value}</p>`;
+      setTimeout(() => {
+        chatbox.innerHTML += `<p class="bot">Bot: I'm a simulated AI. You said: "${input.value}"</p>`;
+      }, 1000);
+      input.value = '';
+    }
+  </script>
+</body>
+</html>
